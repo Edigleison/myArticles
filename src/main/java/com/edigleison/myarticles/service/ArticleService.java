@@ -4,16 +4,16 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.edigleison.myarticles.entity.Aticle;
+import com.edigleison.myarticles.entity.Article;
 import com.edigleison.myarticles.entity.User;
 
 @Service
 public interface ArticleService {
 	
-	Aticle findById(Long id);
-	List<Aticle> findAll();
-	Aticle save(Aticle article);
-	void delete(Aticle article);
-	List<Aticle> findByUser(User user);
+	Article findById(Long id);
+	List<Article> findAll();
+	Article save(Article article);
+	void delete(Article article);
+	List<Article> findByUser(User user);
 
 }
