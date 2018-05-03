@@ -1,0 +1,24 @@
+<div class="card">
+	<div class="card-header">Articles</div>
+	<div class="card-body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Title</th>
+					<th scope="col">Edit</th>
+					<th scope="col">Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="article in articles">
+					<th scope="row">{{article.id}}</th>
+					<td>{{article.title}}</td>
+					<td><a class="btn btn-primary" href="#!/article/edit/{{article.id}}">Edit</a></td>
+					<td><a class="btn btn-danger" href="#" ng-click="remove(article)">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<a class="btn btn-success" href="/article/add">Add</a>
+	</div>
+</div>

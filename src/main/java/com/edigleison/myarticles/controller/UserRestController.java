@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edigleison.myarticles.entity.Aticle;
+import com.edigleison.myarticles.entity.Article;
 import com.edigleison.myarticles.entity.User;
 import com.edigleison.myarticles.service.ArticleService;
 import com.edigleison.myarticles.service.UserService;
@@ -66,9 +66,9 @@ public class UserRestController {
 	}
 	
 	@GetMapping("/{id}/posts")
-	public ResponseEntity<List<Aticle>> listAllPosts(@PathVariable Long id){
+	public ResponseEntity<List<Article>> listAllPosts(@PathVariable Long id){
 		User user = userService.findById(id);
-		List<Aticle> posts = postService.findByUser(user);
+		List<Article> posts = postService.findByUser(user);
 		
 		return new ResponseEntity<>(posts, HttpStatus.OK);
 	}
